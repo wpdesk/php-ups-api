@@ -163,7 +163,7 @@ class Shipping extends Ups
         }
 
         if ($shipment->getShipper()->getPhoneNumber()) {
-            $phoneNode = $shipperNode->appendChild($xml->createElement('Phone');
+            $phoneNode = $shipperNode->appendChild($xml->createElement('Phone'));
             $phoneNode->appendChild($xml->createElement('Number', $shipment->getShipper()->getPhoneNumber()));
         }
 
