@@ -186,7 +186,8 @@ class Shipping extends Ups
         }
 
         if ($shipment->getShipTo()->getPhoneNumber()) {
-            $shipToNode->appendChild($xml->createElement('PhoneNumber', $shipment->getShipTo()->getPhoneNumber()));
+            $phoneNode = $shipToNode->appendChild($xml->createElement('Phone'));
+            $phoneNode->appendChild($xml->createElement('Number', $shipment->getShipper()->getPhoneNumber()));
         }
 
         if ($shipment->getShipTo()->getFaxNumber()) {
@@ -215,7 +216,8 @@ class Shipping extends Ups
             }
 
             if ($shipment->getShipFrom()->getPhoneNumber()) {
-                $shipFromNode->appendChild($xml->createElement('PhoneNumber', $shipment->getShipFrom()->getPhoneNumber()));
+                $phoneNode = $shipFromNode->appendChild($xml->createElement('Phone'));
+                $phoneNode->appendChild($xml->createElement('Number', $shipment->getShipper()->getPhoneNumber()));
             }
 
             if ($shipment->getShipFrom()->getFaxNumber()) {
@@ -239,7 +241,8 @@ class Shipping extends Ups
             }
 
             if ($shipment->getSoldTo()->getPhoneNumber()) {
-                $soldToNode->appendChild($xml->createElement('PhoneNumber', $shipment->getSoldTo()->getPhoneNumber()));
+                $phoneNode = $soldToNode->appendChild($xml->createElement('Phone'));
+                $phoneNode->appendChild($xml->createElement('Number', $shipment->getShipper()->getPhoneNumber()));
             }
 
             if ($shipment->getSoldTo()->getFaxNumber()) {
