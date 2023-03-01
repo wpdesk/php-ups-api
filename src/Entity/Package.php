@@ -32,6 +32,11 @@ class Package implements NodeInterface
      */
     private $packageServiceOptions;
 
+	/**
+	 * @var SimpleRate
+	 */
+	private $simpleRate;
+
     /**
      * @var string
      */
@@ -163,6 +168,10 @@ class Package implements NodeInterface
             $packageNode->appendChild($this->getPackageServiceOptions()->toNode($document));
         }
 
+	    if ($this->getSimpleRate()) {
+		    $packageNode->appendChild($this->getSimpleRate()->toNode($document));
+	    }
+
         if ($this->getReferenceNumber()
             && !is_null($this->getReferenceNumber()->getCode())
             && !is_null($this->getReferenceNumber()->getValue())
@@ -260,27 +269,47 @@ class Package implements NodeInterface
         return $this;
     }
 
-    /**
-     * @return PackageServiceOptions
-     */
-    public function getPackageServiceOptions()
-    {
-        return $this->packageServiceOptions;
-    }
+	/**
+	 * @return PackageServiceOptions
+	 */
+	public function getPackageServiceOptions()
+	{
+		return $this->packageServiceOptions;
+	}
 
-    /**
-     * @param PackageServiceOptions $packageServiceOptions
-     *
-     * @return Package
-     */
-    public function setPackageServiceOptions(PackageServiceOptions $packageServiceOptions)
-    {
-        $this->packageServiceOptions = $packageServiceOptions;
+	/**
+	 * @param PackageServiceOptions $packageServiceOptions
+	 *
+	 * @return Package
+	 */
+	public function setPackageServiceOptions(PackageServiceOptions $packageServiceOptions)
+	{
+		$this->packageServiceOptions = $packageServiceOptions;
 
-        return $this;
-    }
+		return $this;
+	}
 
-    /**
+	/**
+	 * @return SimpleRate
+	 */
+	public function getSimpleRate()
+	{
+		return $this->simpleRate;
+	}
+
+	/**
+	 * @param SimpleRate $simpleRate
+	 *
+	 * @return Package
+	 */
+	public function setSimpleRate(SimpleRate $simpleRate)
+	{
+		$this->simpleRate = $simpleRate;
+
+		return $this;
+	}
+
+	/**
      * @return PackageWeight
      */
     public function getPackageWeight()
