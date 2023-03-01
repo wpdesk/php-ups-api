@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 0.10.1 (released 01-03-2023)
+- fixed PHP version
+
 ## 0.10.0 (released 01-03-2023)
 - added SimpleRate
 
