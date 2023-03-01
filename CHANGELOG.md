@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 0.10.0 (released 01-03-2023)
+- added SimpleRate
+
 ## 0.9.5 (released 05-10-2021)
 - fixed LabelSpecification
 
