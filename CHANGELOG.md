@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 0.10.2 (released 18-04-2023)
+- fixed PHP 8.1 deprecation messages
+
 ## 0.10.1 (released 01-03-2023)
 - fixed PHP version
 
