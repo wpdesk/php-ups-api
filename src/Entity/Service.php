@@ -166,7 +166,7 @@ class Service implements NodeInterface
      */
     public function getName()
     {
-        return self::$serviceNames[$this->getCode()];
+        return self::$serviceNames[$this->getCode()] ?? '';
     }
 
     /**

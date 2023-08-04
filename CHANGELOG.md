@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 0.10.3 (released 04-08-2023)
+- fixed unknown service name
+
 ## 0.10.2 (released 18-04-2023)
 - fixed PHP 8.1 deprecation messages
 
