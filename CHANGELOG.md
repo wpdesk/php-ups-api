@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 0.10.4 (released 01-08-2024)
+- fixed PackagingType Code property
+
 ## 0.10.3 (released 04-08-2023)
 - fixed unknown service name
 

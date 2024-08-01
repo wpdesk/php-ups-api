@@ -113,7 +113,6 @@ class PackagingType implements NodeInterface
      */
     public function setCode($code)
     {
-        $this->Code = $code;
         $this->code = $code;
 
         return $this;
