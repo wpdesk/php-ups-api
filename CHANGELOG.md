@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 0.10.5 (released 19-03-2026)
+- fixed cod amount currency
+
 ## 0.10.4 (released 01-08-2024)
 - fixed PackagingType Code property
 
